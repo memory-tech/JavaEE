@@ -40,7 +40,7 @@
 
 
 
-![image](https://github.com/memory-tech/JavaEE/blob/main/img/clip_image002.jpg)
+![image](img/clip_image002.jpg)
 
 **反射：**根据类名创建对象-------Class.forName()
 
