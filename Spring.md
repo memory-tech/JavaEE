@@ -1,4 +1,4 @@
-**Spring**优势：
+**Spring****优势：**
 
 方便解耦简化开发、AOP编程支持、声明式的事务支持、方便程序测试、方便集成各种优秀的框架、降低JavaEE API的使用难度、Java源码是经典学习范例。
 
@@ -38,9 +38,11 @@
 
 我的配置文件可以是xml也可以是properties
 
+ 
 
+![](img\1.jpg)
 
-![image](img/clip_image002.jpg)
+ 
 
 **反射：**根据类名创建对象-------Class.forName()
 
@@ -74,7 +76,7 @@ spring 管理实例工厂-使用实例工厂的方法创建对象：先指定实
 
 2、 使用静态工厂的方法创建对象
 
-![png](file:///C:/Users/memory/AppData/Local/Temp/msohtmlclip1/01/clip_image006.png)
+![img](file:///C:/Users/memory/AppData/Local/Temp/msohtmlclip1/01/clip_image006.png)
 
 ![img](file:///C:/Users/memory/AppData/Local/Temp/msohtmlclip1/01/clip_image008.png)
 
@@ -128,19 +130,21 @@ Dao可以获得 Data数据库，首先建立一个连接，写Service，Client�
 
 注解配置和xml配置要实现的功能是一样的，都是要降低程序间的耦合
 
+**常用注解解析：**
+
 @Component：把普通POJO实例化到spring容器中，相当于xml中的配置，它泛指各种组件，就是说当我们的类不属于各种归类的时候（不属于@Service、@Repository持久层、@Controller等的时候），我们就可以使用@Component来标注这个类。
 
  
 
-@Autowired
+@Autowired：按照类型自动注入
 
-@Qalifier(“”): 上面类型发生冲突时（有两个实现类）用下面的进行匹配**或者**用@Resource
+@Qualifier (“”): 上面类型发生冲突时（有两个实现类）用@Qualifier的进行匹配**或者**用@Resource，@Resource是按照id注入
 
-@Value： 基本数据类型
+@Value： 基本数据类型和String类型
 
  
 
-IOC纯注解配置：
+**IOC****纯注解配置：**
 
 把第三方工具通过Bean加到IOC容器中
 
@@ -148,23 +152,28 @@ IOC纯注解配置：
 
 ![img](file:///C:/Users/memory/AppData/Local/Temp/msohtmlclip1/01/clip_image018.png)
 
-纯注解配置：
+**两者对比：**
+
+注解的优势：配置简单，维护方便（我们找到类，就相当于找到了对应的配置）。
+
+XML 的优势：修改时，不用改源码。不涉及重新编译和部署
+
+**纯注解配置：**
 
 @Configuration：用于指定当前类是一个 spring 配置类，当创建容器时会从该类上加载注解。获取容器时需要使用AnnotationApplicationContext(有@Configuration 注解的类.class)。
 
-@ComponentScan：用于指定要扫描的包
+@ComponentScan：用于指定要扫描的包，作用和在 spring 的 xml 配置文件中的<context:component-scan base-package="com.itheima"/>是一样的。
 
 ![img](file:///C:/Users/memory/AppData/Local/Temp/msohtmlclip1/01/clip_image019.png)
 
 @Bean：该注解只能写在方法上，表明使用此方法创建一个对象，并且放入 spring 容器。
 
+![Y8RTXKS3ZQ5OG4]E_YM4(1P](file:///C:/Users/memory/AppData/Local/Temp/msohtmlclip1/01/clip_image021.jpg)
+
 @PropertySource：用于加载.properties 文件中的配置。例如我们配置数据源时，可以把连接数据库的信息写到properties 配置文件中，就可以使用此注解指定 properties 配置文件的位置。
 
 @Import：用于导入其他配置类，在引入其他配置类时，可以不用再写@Configuration 注解。
 
-![img](file:///C:/Users/memory/AppData/Local/Temp/msohtmlclip1/01/clip_image021.png)
-
-通过注解获取容器：
-
 ![img](file:///C:/Users/memory/AppData/Local/Temp/msohtmlclip1/01/clip_image023.png)
 
+通过注解获取容器：
