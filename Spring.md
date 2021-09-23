@@ -38,7 +38,7 @@
 
 我的配置文件可以是xml也可以是properties
 
-![](https://github.com/memory-tech/JavaEE/tree/main/img/clip_image002.jpg)
+![jpg](../img/clip_image002.jpg)
 
 **反射：**根据类名创建对象-------Class.forName()
 
@@ -72,7 +72,7 @@ spring 管理实例工厂-使用实例工厂的方法创建对象：先指定实
 
 2、 使用静态工厂的方法创建对象
 
-![img](file:///C:/Users/memory/AppData/Local/Temp/msohtmlclip1/01/clip_image006.png)
+![png](file:///C:/Users/memory/AppData/Local/Temp/msohtmlclip1/01/clip_image006.png)
 
 ![img](file:///C:/Users/memory/AppData/Local/Temp/msohtmlclip1/01/clip_image008.png)
 
