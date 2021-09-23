@@ -38,7 +38,7 @@
 
 我的配置文件可以是xml也可以是properties
 
-![Image text](https://github.com/memory-tech/JavaEE/blob/main/img/clip_image002.jpg)
+![Image text](../img/clip_image002.jpg)
 
 **反射：**根据类名创建对象-------Class.forName()
 
